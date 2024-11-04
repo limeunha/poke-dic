@@ -1,6 +1,6 @@
 .PokeInsert {
    display: flex;
-   background: #9399a0;
+   background: #fff;
 }
 
 .PokeInsert input {
@@ -10,12 +10,12 @@
    padding: 0.5rem;
    font-size: 1.125rem;
    line-height: 1.5;
-   color: white;
+   color: rgb(255, 255, 255);
    flex: 1;
 }
 
 .PokeInsert input::placeholder {
-   color: #dee2e6;
+   color: #ff00bf;
 }
 
 .PokeInsert button {
