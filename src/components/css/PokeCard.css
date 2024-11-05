@@ -2,11 +2,10 @@
    display: inline-block;
    margin-bottom: 10px;
    padding: 10px;
-   border: 1px solid #ddd;
-   border-radius: 8px;
    width: 350px;
    text-align: center;
    background-color: #fff;
+   padding-right: 10px;
 }
 
 .poke-card img {
@@ -14,11 +13,19 @@
    height: 130px;
    object-fit: cover;
    margin-bottom: 10px;
+   text-align: center;
 }
 
 .poke-card p {
    font-size: 16px;
    color: rgb(253, 0, 148);
+}
+
+.ul > li {
+   padding-left: 10px;
+   padding-right: 30px;
+   margin: 40px 0;
+   list-style: none;
 }
 
 .poke-card button {
