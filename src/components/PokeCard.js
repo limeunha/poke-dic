@@ -1,17 +1,26 @@
+import React from 'react'
 import './css/PokeCard.css'
-import React from 'react';
 
-const PokeCard = ({ text }) => {
-    return (
-        <div className="card-container">
-            {text.map((pokemon) => (
-                <div key={pokemon.id} className="card">
-                    <h2>{pokemon.이름}</h2>
-                    <img src={pokemon.이미지} alt={pokemon.이름} />
-                </div>
-            ))}
-        </div>
-    );
-};
+const PokeCard = ({ pokemons, onRemovePokemon, onToggle }) => {
+   return (
+      <div>
+         <ul>
+            {pokemons.length === 0 ? (
+               <p>포켓몬이 없습니다.</p>
+            ) : (
+               pokemons.map((poke) => (
+                  <li key={poke.id} className={`poke-card ${poke.checked ? 'disabled' : ''}`} onDoubleClick={() => onToggle(poke.id)}>
+                     <div>
+                        <img src={poke.img} alt={poke.name} className={poke.checked ? 'disabled-img' : ''} />
+                        <p className={poke.checked ? 'disabled-text' : ''}>{poke.name}</p>
+                        <button onClick={() => onRemovePokemon(poke.id)}>삭제</button>
+                     </div>
+                  </li>
+               ))
+            )}
+         </ul>
+      </div>
+   )
+}
 
-export default PokeCard;
+export default PokeCard

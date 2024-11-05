@@ -1,14 +1,50 @@
-.PokeCard {
-   border: 1px solid #ccc;
+.poke-card {
+   display: inline-block;
+   margin-bottom: 10px;
+   padding: 10px;
+   border: 1px solid #ddd;
    border-radius: 8px;
-   padding: 16px;
+   width: 350px;
    text-align: center;
-   width: 150px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
 }
 
-.PokeCard img {
-   max-width: 100%;
-   height: auto;
-   border-radius: 4px;
+.poke-card img {
+   width: 130px;
+   height: 130px;
+   object-fit: cover;
+   margin-bottom: 10px;
+}
+
+.poke-card p {
+   font-size: 16px;
+   color: rgb(253, 0, 148);
+}
+
+.poke-card button {
+   background-color: rgb(253, 0, 148);
+   color: #fff;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.poke-card.disabled {
+   background-color: #e0e0e0;
+}
+
+.disabled.poke-card button {
+   color: gray;
+}
+
+.disabled-img {
+   filter: grayscale(100%);
+}
+
+.disabled.poke-card p {
+   color: gray;
+}
+.disabled-text {
+   color: gray;
 }
